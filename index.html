@@ -1,192 +1,70 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta name="robots" content="noindex">
-  <meta charset="UTF-8">
-  <title>Mijn Professionele CV</title>
-  <style>
-    body {
-      background-color: #000; /* Zwarte achtergrond */
-      font-family: 'Roboto', sans-serif;
-      margin: 0;
-      padding: 0;
-      color: #fff; /* Witte tekstkleur */
-    }
-    .container {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 20px;
-      background-image: url('achtergrond-programmeercode.png');
-      background-size: contain;
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    }
-    .header {
-      text-align: center;
-      padding-bottom: 5px; /* Meer marge onder de titel */
-      border-bottom: 1px solid #fff; /* Lijn met meer marge */
-      margin-bottom: 0px; /* Meer marge onder de lijn */
-    }
-    .section {
-      background-color: rgba(255, 255, 255, 0.3);
-      margin-bottom: 40px; /* Meer ruimte tussen de secties */
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transities toegevoegd */
-    }
-    .section:hover {
-      transform: scale(1.03); /* Subtiele vergroting bij hover */
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Glow-effect toegevoegd bij hover op kader */
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro Curriculum Vitae</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
 
+        header {
+            background-color: #333;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
 
+        main {
+            padding: 20px;
+        }
 
+        /* Ster-animatie */
+        .star-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
 
-    h2 {
-      font-size: 24px;
-      color: #fff;
-      text-transform: uppercase;
-      margin-bottom: 20px; /* Meer marge onder de sectie titels */
-      transition: text-shadow 0.3s ease-in-out; /* Transities toegevoegd */
-    }
-    .section:hover h2 {
-      text-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Glow-effect toegevoegd bij hover op tekst */
-    }
-    p {
-      font-size: 18px;
-      color: #eee;
-  margin-bottom: 5px; /* eventueel Negatieve waarde om de onderste marge aan te passen */
-    }
-    p1 {
-      font-size: 14px;
-      color: #eee;
-    }
-    li {
-      font-size: 14px;
-      color: #eee;
-    }
-    .first-section {
-      margin-top: 40px; /* Meer marge boven de eerste sectie */
-    }
-    ul {
-      list-style-type: disc; /* Lijstpuntjes voor een ongeordende lijst */
-      margin-left: 10px; /* Inspringen van de lijst */
-    }
-  </style>
+        .star {
+            width: 300px;
+            height: 300px;
+            background: url('ster.png') no-repeat center center / contain;
+            cursor: pointer;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .star:hover {
+            transform: rotate(360deg);
+        }
+    </style>
 </head>
 <body>
 
-<div class="container">
-  <div class="header">
-        <p style="font-size: 12px; text-align: center; margin-bottom: -10px;">Great things in business are never done by one person... They're done by a team of people.</p>
-        <h1>Jan Bultereys</h1>
-    <div class="line"></div> <!-- Lijn onder de titel -->
-  </div>
-  
-  <!-- Futuristische secties -->
-  <div class="section first-section">
-    <h2>PRAKTIJKERVARINGEN</h2>
-    <p>Manager Creative Services Systems & Applications DACH/BNLX bij Office Depot</p>
-     <p1> 01-04-2011 tot 01-07-2018</p1>
-    <ul>
-      <li>Beheer van alle hardware- en software-infrastructuur binnen de creatieve afdeling, 
-      in nauwe samenwerking met de IT-afdeling en lokale systeembeheerders.</li>
-      <li>Ontwikkeling en uitvoering van trainingen voor de creatieve afdeling.</li>
-      <li>Faciliteren van communicatie tussen de creatieve afdeling en externe prepress-bedrijven, inclusief het identificeren en oplossen van eventuele problemen</li>
-      <li>Coördinatie van regionale systeembeheerders met betrekking tot rapportage, programmaondersteuning, budgetbeheer, aankoop van hardware en software, 
-      en andere gerelateerde zaken.</li>
-      <li>Ontwikkelen van scripts voor het automatiseren van repetitieve creatieve taken, met AppleScript als belangrijkste tool, om de productiviteit van het team te verhogen.</li>
-      <li>Intensieve samenwerking met IT voor het vormgeven van alle Unix-gerelateerde hardware- en softwareaspecten volgens de vereiste standaarden.</li>
-    </ul>
+    <header>
+        Jan Bultereys
+    </header>
 
-    <p>Assistant Manager Cat. Prod. Systems Creative Services Benelux bij Office Depot</p>
-    <p1>01-02-2001 tot 01-04-2011</p1>
-    <ul>
-    <li>Installatie, configuratie, diagnose en probleemoplossing met betrekking tot OS X.</li>
-    <li>Ondersteuning en onderhoud van gebruikers binnen het systeem.</li>
-    <li>Coördinatie van het Europese technische team (DACH, IT, SP, NL, UK, FR).</li>
-    <li>Beheer van fontbibliotheek op UTS-server/client.</li>
-    <li>Beheer van gebruikers en groepen met behulp van Helios Admin-tools.</li>
-    <li>Beheer van 4 Xerox printers, inclusief oplossingen voor kleine technische problemen.</li>
-    <li>Ontwikkeling van scripts voor automatisering van repetitieve creatieve taken ter verbetering van de teamproductiviteit.</li>
-    <li>Leidinggeven aan een klein prepress-team.</li>
-    <li>Beheer en inventarisatie van hardware en software voor de creatieve afdeling.</li>
-    <li>Aankoop van hardware en software met het oog op een positieve ROI (Return on Investment).</li>
-    <li>Beheer van het budget (G&A).</li>
-    </ul>
-
-  </div>
-  <div class="section">
-    <h2>Vorige betrekkingen</h2>
-    <p>Verantwoordelijke DTP / Eindverantwoordelijke productie bij Baskerville</p>
-     <p1> 2 jaar</p1>
-     <p>Creative consultant bij Artiff</p>
-     <p1> 1 jaar</p1>
-     <p>Desktop Publishing bij De Bouwkroniek</p>
-     <p1> 6 jaar</p1>
-  </div>
-
-  <div class="section">
-    <h2>Certificaten</h2>
-    <p>
-      Apple Certified Support Professional 10.6, Diploma Dactylografie Instituut De Waele
-Intensive training Xpress 7 Upgrade, Solaris 8 system admin I, Unix Ess. Featuring the Solaris 9, Solaris 9 Sys Admin Intermed, Intermediate System Admin for Solaris 10,
-Indesign en XML, Excel Basis, Dreamweaver Basis.
-    </p>
-  </div>
-
-  <div class="section">
-   <h2>STUDIES</h2>
-    <p>Specialisatiejaar Tekstverwerking (MCS) Hoge School Higro Gent</p>
-     <p1> 1 jaar</p1>
-     <p>Specialisatiejaar Tekst -en Beeldintegratie Hoge School Higro Gent</p>
-     <p1> 1 jaar</p1>
-     <p>Specialisatiejaar Micromontage Hoge School Higro Gent</p>
-     <p1> 1 jaar</p1>
-     <p>Hoger secundair onderwijs Grafische Technieken Don Bosco - Halle </p>
-     <p1> 6 jaar</p1>
-  </div>
-
-  <div class="section">
-    <h2>TALENKENNIS</h2>
-    <p>Nederlands</p>
-     <p1>moedertaal</p1>
-     <p>Engels</p>
-     <p1>vloeiend</p1>
-     <p>Frans</p>
-     <p1>Ma connaissance du français est limitée, mais je suis capable de m'en sortir.</p1>
-     <p>Duits</p>
-     <p1>noties</p1>
-  </div>
-
-  <div class="section">
-    <h2>DIVERSEN</h2>
-    <p>Adres</p>
-     <p1>Lippeloseweg 6 - 2890 Oppuurs</p1>
-     <p>Telefoon</p>
-     <p1>0470 83 28 23</p1>
-     <p>email</p>
-     <p1>jan.bultereys@gmail.com</p1>
-     <p>Geboortedatum</p>
-     <p1>06 03 1970</p1>
-     <p>Mobiliteit</p>
-     <p1>Rijbewijs B</p1>
-     <p>Referenties</p>
-     <p1>Gert.vigener@officedepot.com, director creative services EU.</p1>
-     <p>Hobby’s</p>
-     <p1>Vakliteratuur Apple, skiën</p1>
-     <p>Vrijwilligerswerk</p>
-     <p1>Oud-Chiroleider</p1>
-     <p>Legerdienst</p>
-     <p1>1 Jaar Militaire Politie</p1>
-  </div>
-  <!-- Einde futuristische secties -->
-  
-</div>
+    <main>
+        <h1>Curriculum Vitae</h1>
+        <p>Welkom op mijn cv-pagina!</p>
+        <p>Klik op de onze planeet en ontdek mijn professionele achtergrond, vaardigheden en ervaring.</p>
+        
+        <!-- Ster met link naar index.html pagina -->
+        <a href="index2.html">
+            <div class="star-container">
+                <div class="star"></div>
+            </div>
+        </a>
+    </main>
 
 </body>
 </html>
