@@ -15,16 +15,50 @@
             overflow: hidden;
         }
 
+        video {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+
+        /* Plaats hier je stilstaande afbeelding */
+        .background-image {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            display: none; /* Standaard verborgen */
+        }
+
         header {
             background-color: #333;
             padding: 20px;
             font-size: 24px;
             font-weight: bold;
+            text-align: center;
+            width: 100%;
+            position: fixed; /* Aanpassing naar fixed om bovenaan te blijven */
+            top: 0;
+            z-index: 1;
         }
 
         main {
-            padding: 20px;
+            padding: 80px 20px 20px; /* Aanpassing om ruimte bovenaan het hoofdgedeelte toe te voegen */
             position: relative;
+            text-align: center;
+            z-index: 1;
+            color: #fff;
         }
 
         /* Ster-animatie */
@@ -33,6 +67,7 @@
             top: 100%;
             left: 50%;
             transform: translateX(-50%);
+            z-index: 1;
         }
 
         .star {
@@ -40,32 +75,63 @@
             height: 300px;
             background: url('ster.png') no-repeat center center / contain;
             cursor: pointer;
+            animation: fadeIn 20s forwards; /* Animatie voor de fading */
             transition: transform 0.5s ease-in-out;
         }
 
         .star:hover {
             transform: rotate(360deg);
         }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0.1;
+            }
+            to {
+                opacity: 1;
+            }
+        }
     </style>
 </head>
 <body>
 
+    <video autoplay muted id="backgroundVideo" onended="replaceVideoWithImage()">
+        <source src="Explosion.m4v" type="video/mp4">
+        Je browser ondersteunt geen video-tags.
+    </video>
+
+    <!-- Plaats hier je stilstaande afbeelding -->
+    <img class="background-image" src="sterBackground.png" alt="Stilstaand beeld">
+
     <header>
-        Jan Bultereys
+        Curriculum Vitae - Jan Bultereys
     </header>
 
     <main>
-        <h1>Curriculum Vitae</h1>
-        <p>Welkom op mijn cv-pagina!</p>
-        <p>Klik op onze planeet en ontdek mijn professionele achtergrond, vaardigheden en ervaring.</p>
+        <!-- <h1>Curriculum Vitae</h1>
+        <p>Welkom op mijn cv-pagina!</p> -->
+        <p>Klik op onze planeet </p>
+       <p> Ontdek mijn professionele achtergrond, vaardigheden en ervaring.</p>
         
-        <!-- Ster met link naar index.html pagina -->
         <a href="index2.html">
             <div class="star-container">
                 <div class="star"></div>
             </div>
         </a>
     </main>
+
+    <script>
+        // Verander de afspeelsnelheid van de video
+        var video = document.getElementById("backgroundVideo");
+        video.playbackRate = 1; // Aanpassen aan de gewenste snelheid
+
+        // Vervang de video door het stilstaande beeld wanneer de video eindigt
+        function replaceVideoWithImage() {
+            video.style.display = "none"; // Verberg de video
+            var backgroundImage = document.querySelector('.background-image');
+            backgroundImage.style.display = "block"; // Toon het stilstaande beeld
+        }
+    </script>
 
 </body>
 </html>
