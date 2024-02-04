@@ -14,7 +14,7 @@
     }
     .container {
       max-width: 800px;
-      margin: 20px auto;
+      margin: 10px auto;
       padding: 20px;
       background-image: url('achtergrond-programmeercode.png');
       background-size: contain;
@@ -26,9 +26,11 @@
     }
     .header {
       text-align: center;
-      padding-bottom: 5px; /* Meer marge onder de titel */
+      padding-bottom: 1px; /* Meer marge onder de titel */
       border-bottom: 1px solid #fff; /* Lijn met meer marge */
-      margin-bottom: 0px; /* Meer marge onder de lijn */
+      margin-bottom: 1px; /* Meer marge onder de lijn */
+        margin-top: -60px; /* Adjust this value to reduce the top margin */
+
     }
     .section {
       background-color: rgba(255, 255, 255, 0.3);
@@ -43,11 +45,8 @@
       box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Glow-effect toegevoegd bij hover op kader */
     }
 
-
-
-
     h2 {
-      font-size: 24px;
+      font-size: 22px;
       color: #fff;
       text-transform: uppercase;
       margin-bottom: 20px; /* Meer marge onder de sectie titels */
@@ -57,9 +56,9 @@
       text-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Glow-effect toegevoegd bij hover op tekst */
     }
     p {
-      font-size: 18px;
+      font-size: 16px;
       color: #eee;
-  margin-bottom: 5px; /* eventueel Negatieve waarde om de onderste marge aan te passen */
+  margin-bottom: -3px; /* eventueel Negatieve waarde om de onderste marge aan te passen */
     }
     p1 {
       font-size: 10px;
@@ -76,16 +75,62 @@
       list-style-type: disc; /* Lijstpuntjes voor een ongeordende lijst */
       margin-left: 10px; /* Inspringen van de lijst */
     }
+  
+
+    /* Nieuwe stijlen voor tabs */
+.tabs-container {
+  display: flex;
+  flex-direction: row; /* Behoud de rijrichting voor naast elkaar */
+  align-items: flex-start; /* Uitlijnen aan de bovenkant */
+  padding: 10px;
+  background-color: #333;
+}
+
+.tab {
+  cursor: pointer;
+  color: #fff;
+  padding: 5px;
+  margin-right: 10px; /* Voeg een marge tussen de tabjes toe */
+}
+
+.tab:hover {
+  background-color: #555;
+}
+
+.tab.active {
+  background-color: #555;
+}
+
+
+
+    /* Toegevoegde stijl voor taalinhoud */
+    .content-container {
+      display: none;
+    }
+
+    .content-container.active {
+      display: block;
+    }
   </style>
 </head>
 <body>
 
-<div class="container">
+<div class="tabs-container">
+  <div class="tab active" onclick="showTab('nl')">NL</div>
+  <div class="tab" onclick="showTab('en')">EN</div>
+</div>
+
+<div class="container content-container active" id="nlContent">
+  <!-- Inhoud van de webpagina in het Nederlands -->
+  <div class="container">
   <div class="header">
-        <p style="font-size: 12px; text-align: center; margin-bottom: -10px;">Great things in business are never done by one person... They're done by a team of people.</p>
-        <h1>Jan Bultereys</h1>
-    <div class="line"></div> <!-- Lijn onder de titel -->
-  </div>
+  <p style="font-size: 12px; text-align: center; margin-bottom: -10px;">
+Grote prestaties in bedrijven worden nooit door één persoon gedaan... Ze worden gedaan door een team van mensen.
+  </p>
+  <h1>Jan Bultereys</h1>
+  <div class="line"></div> <!-- Lijn onder de titel -->
+</div>
+
   
   <!-- Futuristische secties -->
   <div class="section first-section">
@@ -133,8 +178,8 @@
   <div class="section">
     <h2>Certificaten</h2>
     <p>
-      Apple Certified Support Professional 10.6, Diploma Dactylografie Instituut De Waele
-Intensive training Xpress 7 Upgrade, Solaris 8 system admin I, Unix Ess. Featuring the Solaris 9, Solaris 9 Sys Admin Intermed, Intermediate System Admin for Solaris 10,
+      Apple Certified Support Professional 10.6, Diploma Dactylografie Instituut De Waele,
+Intensieve opleiding Xpress 7, Solaris 8 system admin I, Unix Ess. Featuring the Solaris 9, Solaris 9 Sys Admin Intermed, Intermediate System Admin for Solaris 10,
 Indesign en XML, Excel Basis, Dreamweaver Basis.
     </p>
   </div>
@@ -174,7 +219,7 @@ Indesign en XML, Excel Basis, Dreamweaver Basis.
      <p>Geboortedatum</p>
      <p1>06 03 1970</p1>
      <p>Mobiliteit</p>
-     <p1>Rijbewijs B + eigen wagen</p1>
+     <p1>Rijbewijs B</p1>
      <p>Referenties</p>
      <p1>Gert.vigener@officedepot.com, director creative services EU.</p1>
      <p>Hobby’s</p>
@@ -187,6 +232,139 @@ Indesign en XML, Excel Basis, Dreamweaver Basis.
   <!-- Einde futuristische secties -->
   
 </div>
+</div>
+
+<div class="container content-container" id="enContent">
+  <!-- Inhoud van de webpagina in het Engels -->
+  <div class="container">
+  <div class="header">
+        <p style="font-size: 12px; text-align: center; margin-bottom: -10px;">Great things in business are never done by one person... They're done by a team of people.</p>
+        <h1>Jan Bultereys</h1>
+    <div class="line"></div> <!-- Lijn onder de titel -->
+  </div>
+  
+  <!-- Futuristische secties -->
+  <div class="section first-section">
+   <h2>PROFESSIONAL EXPERIENCE</h2>
+<p>Manager Creative Services Systems & Applications DACH/BNLX at Office Depot</p>
+<p1>01-04-2011 to 01-07-2018</p1>
+<ul>
+  <li>Management of all hardware and software infrastructure within the creative department, 
+  in close collaboration with the IT department and local system administrators.</li>
+  <li>Development and execution of training programs for the creative department.</li>
+  <li>Facilitation of communication between the creative department and external prepress companies, including identification and resolution of any issues.</li>
+  <li>Coordination of regional system administrators regarding reporting, program support, budget management, hardware and software procurement, 
+  and other related matters.</li>
+  <li>Development of scripts to automate repetitive creative tasks, utilizing AppleScript as the primary tool, to enhance team productivity.</li>
+  <li>Intensive collaboration with IT to shape all Unix-related hardware and software aspects according to required standards.</li>
+</ul>
+
+<p>Assistant Manager Cat. Prod. Systems Creative Services Benelux at Office Depot</p>
+<p1>01-02-2001 to 01-04-2011</p1>
+<ul>
+<li>Installation, configuration, diagnosis, and troubleshooting related to OS X.</li>
+<li>Support and maintenance of users within the system.</li>
+<li>Coordination of the European technical team (DACH, IT, SP, NL, UK, FR).</li>
+<li>Management of font library on UTS server/client.</li>
+<li>Management of users and groups using Helios Admin tools.</li>
+<li>Management of 4 Xerox printers, including solutions for minor technical issues.</li>
+<li>Development of scripts for automation of repetitive creative tasks to enhance team productivity.</li>
+<li>Supervision of a small prepress team.</li>
+<li>Management and inventory of hardware and software for the creative department.</li>
+<li>Procurement of hardware and software with a focus on positive ROI (Return on Investment).</li>
+<li>Budget management (G&A).</li>
+</ul>
+
+
+  </div>
+ <div class="section">
+    <h2>PREVIOUS POSITIONS</h2>
+    <p>Responsible DTP / Production Manager at Baskerville</p>
+    <p1>2 years</p1>
+    <p>Creative Consultant at Artiff</p>
+    <p1>1 year</p1>
+    <p>Desktop Publishing at De Bouwkroniek</p>
+    <p1>6 years</p1>
+</div>
+
+
+  <div class="section">
+    <h2>Certificates</h2>
+    <p>
+    Apple Certified Support Professional 10.6, Diploma Typing Institute De Waele
+    Intensive training: Xpress 7 Upgrade, Solaris 8 System Admin I, Unix Essentials Featuring the Solaris 9, Solaris 9 Sys Admin Intermediate, Intermediate System Admin for Solaris 10,
+    Indesign and XML, Excel Basics, Dreamweaver Basics.
+</p>
+
+  </div>
+
+  <div class="section">
+    <h2>EDUCATION</h2>
+    <p>Specialization Year in Text Processing (MCS) at Higro Gent Higher School</p>
+    <p1>1 year</p1>
+    <p>Specialization Year in Text and Image Integration at Higro Gent Higher School</p>
+    <p1>1 year</p1>
+    <p>Specialization Year in Micromontage at Higro Gent Higher School</p>
+    <p1>1 year</p1>
+    <p>Higher Secondary Education in Graphic Techniques at Don Bosco - Halle</p>
+    <p1>6 years</p1>
+</div>
+
+
+  <div class="section">
+    <h2>LANGUAGE SKILLS</h2>
+    <p>Dutch</p>
+    <p1>Native language</p1>
+    <p>English</p>
+    <p1>Fluent</p1>
+    <p>French</p>
+    <p1>My knowledge of French is limited, but I can manage.</p1>
+    <p>German</p>
+    <p1>Basic understanding</p1>
+</div>
+
+<div class="section">
+    <h2>MISCELLANEOUS</h2>
+    <p>Address</p>
+    <p1>Lippeloseweg 6 - 2890 Oppuurs</p1>
+    <p>Phone</p>
+    <p1>0470 83 28 23</p1>
+    <p>Email</p>
+    <p1>jan.bultereys@gmail.com</p1>
+    <p>Date of Birth</p>
+    <p1>06 03 1970</p1>
+    <p>Mobility</p>
+    <p1>Driving License B</p1>
+    <p>References</p>
+    <p1>Gert.vigener@officedepot.com, Director Creative Services EU.</p1>
+    <p>Hobbies</p>
+    <p1>Professional literature on Apple, skiing</p1>
+    <p>Volunteer Work</p>
+    <p1>Former Scout Leader</p1>
+    <p>Military Service</p>
+    <p1>1 Year Military Police</p1>
+</div>
+
+  <!-- Einde futuristische secties -->
+  
+</div>
+</div>
+
+<script>
+  function showTab(language) {
+    if (language === 'nl') {
+      document.getElementById('nlContent').classList.add('active');
+      document.getElementById('enContent').classList.remove('active');
+      document.querySelector('.tab.active').classList.remove('active');
+      document.querySelector('.tab:nth-child(1)').classList.add('active');
+    } else if (language === 'en') {
+      document.getElementById('nlContent').classList.remove('active');
+      document.getElementById('enContent').classList.add('active');
+      document.querySelector('.tab.active').classList.remove('active');
+      document.querySelector('.tab:nth-child(2)').classList.add('active');
+    }
+  }
+</script>
 
 </body>
 </html>
